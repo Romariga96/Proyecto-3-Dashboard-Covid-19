@@ -1,6 +1,7 @@
 const covidStatus = [];
 let responseContry = {};
-let citie = document.getElementById("pais").value;
+//let citie = document.getElementById("pais").value;
+//let boton_enviar = getElementById("boton-enviar");
 let confirmados = 0;
 let muertes = 0;
 let recuperados = 0;
@@ -47,6 +48,8 @@ const dataChart = {
   });
 
   const getCovidCases = async () => {
+
+    let citie = document.getElementById("pais").value;
    
    // let response = await axios.get(`https://covid-api.mmediagroup.fr/v1/cases`);//regresa el estatus de todos los paises
    if(citie != ""){
@@ -64,4 +67,6 @@ const dataChart = {
     myChart.update();
   };
 
-  getCovidCases();
+  //getCovidCases();
+
+ 
