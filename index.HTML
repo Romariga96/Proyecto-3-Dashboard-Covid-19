@@ -24,14 +24,8 @@
 
       <h5>Formulario</h5>
 
-      <label style="color: black">Usuario</label>
-      <input type="text" ; usuario="Usuario" />
-      <label id="boton-enviar">
-        <button type="enviar">Enviar</button>
-      </label>
-
       <label style="color: black">País</label>
-      <input type="text" ; país="País" />
+      <input id="pais" type="text" ; país="País" />
       <label id="boton-enviar"> <button type="enviar">Enviar</button> </label
       ><br />
 
@@ -45,7 +39,10 @@
       <label for="cbox2">Recuperados</label><br />
       <input type="checkbox" id="cbox3" value="tercerCheckbox" />
       <label for="cbox3">Muertes</label>
-
+      <div style="width: 800px; height: 400px;">
+        <canvas id="covidChart"></canvas>
+      </div>
+       
       <footer>
         <b>
           <h6>INTEGRANTES DEL EQUIPO</h6>
@@ -111,8 +108,10 @@
 
         </div>
       </footer>
-
-      <script src="main.js"></script>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
