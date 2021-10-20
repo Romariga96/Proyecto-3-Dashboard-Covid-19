@@ -1,10 +1,7 @@
-const covidStatus = [];
-let responseContry = {};
+
 //let citie = document.getElementById("pais").value;
 //let boton_enviar = getElementById("boton-enviar");
-let confirmados = 0;
-let muertes = 0;
-let recuperados = 0;
+
 
 const dataChart = {
     labels: ["Confirmados","Muertes","Recuperados"],
@@ -49,14 +46,19 @@ const dataChart = {
 
   const getCovidCases = async () => {
 
+    const covidStatus = [];
+    let responseContry = {};
     let citie = document.getElementById("pais").value;
+    let confirmados = 0;
+    let muertes = 0;
+    let recuperados = 0;
    
    // let response = await axios.get(`https://covid-api.mmediagroup.fr/v1/cases`);//regresa el estatus de todos los paises
    if(citie != ""){
     responseContry = await axios.get(`https://covid-api.mmediagroup.fr/v1/cases?country=${citie}`);
-   } else{
+   } /*else{
      responseContry = await axios.get(`https://covid-api.mmediagroup.fr/v1/cases?country=Mexico`);
-   }
+   }*/
     
     let countryall = responseContry.data['All'];
        confirmados = countryall['confirmed'];
