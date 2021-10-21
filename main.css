@@ -127,8 +127,6 @@ section .presentacion{
     font-weight: 400;
     text-align: justify;
 }
-
-
 .container{
     background: linear-gradient(10deg,#92c7d4,#f27e26  );
     height: 650px;
@@ -137,8 +135,6 @@ section .presentacion{
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-
-    
 }
 .form{
     background-color: #0191B4;
@@ -187,6 +183,7 @@ section .presentacion{
 /*.container_canvas{
     display: flex;
     flex-shrink:8;
+<<<<<<< HEAD
 }*/
 
 /*FOOTER*/
@@ -259,3 +256,4 @@ footer .Título-2{
     text-align: center;
     color:#004aad;
 }
+
