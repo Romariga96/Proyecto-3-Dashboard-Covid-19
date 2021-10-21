@@ -11,8 +11,8 @@
 
 }
 .container{
-    background-color: #c9e8eb ;
-    height: 680px;
+    background: linear-gradient(10deg,#92c7d4,#f27e26  );
+    height: 650px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -27,7 +27,8 @@
     background-color: #0191B4;
     width: 260px;
     padding: 20px;
-    text-align: center;
+    
+   
 }
 .form h5{
     background: linear-gradient(90deg,#F8D90F,#FE7A15);
