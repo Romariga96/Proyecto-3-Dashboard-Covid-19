@@ -10,3 +10,64 @@
    
 
 }
+.container{
+    background: linear-gradient(10deg,#92c7d4,#f27e26  );
+    height: 650px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+   
+ 
+
+    
+}
+.form{
+    background-color: #0191B4;
+    width: 260px;
+    padding: 20px;
+    
+   
+}
+.form h5{
+    background: linear-gradient(90deg,#F8D90F,#FE7A15);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip:text;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.form input[type="text"],
+.form label button[type="enviar"]
+/*form label*/{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 10px auto;
+    padding: 10px 10px;
+    text-align: center;
+    border:2px solid #FE7A15;
+    width: 200px;
+    color: #F8D90F;
+    border-radius: 20px;
+    transition: 0.20s;
+    outline: none;
+}
+.form input[type="text"]:focus{
+    width: 220px;
+    border-color:#F8D90F;  
+}
+.form label button[type="enviar"]{
+    border: 0;
+    background: #FE7A15;
+    cursor: pointer;
+}
+.form label button[type="enviar"]:hover{
+    background: none;
+    border:2px solid #F8D90F;
+}
+/*.container_canvas{
+    display: flex;
+    flex-shrink:8;
+}*/
