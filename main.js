@@ -36,6 +36,8 @@ const dataChart = {
     type: "bar",
     data: dataChart,
     options: {
+      responsive:true,
+      maintainAspectRatio:false,
       scales: {
         y: {
           beginAtZero: true
