@@ -1,6 +1,7 @@
 *{
 
     box-sizing: border-box;
+
     padding: 0;
     margin: 0;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -126,6 +127,16 @@ section .presentacion{
     color: #004aad;
     font-weight: 400;
     text-align: justify;
+=======
+
+    padding: 0;
+
+    margin: 0;
+
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   
+
+
 }
 .container{
     background: linear-gradient(10deg,#92c7d4,#f27e26  );
@@ -135,6 +146,7 @@ section .presentacion{
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+
 }
 .form{
     background-color: #0191B4;
@@ -151,7 +163,8 @@ section .presentacion{
     text-transform: uppercase;
     font-weight: 600;
 }
-.form input[type="text"],
+
+.form select,
 .form label button[type="enviar"]
 /*form label*/{
     border: 0;
@@ -183,7 +196,7 @@ section .presentacion{
 /*.container_canvas{
     display: flex;
     flex-shrink:8;
-<<<<<<< HEAD
+
 }*/
 
 /*FOOTER*/
@@ -256,4 +269,7 @@ footer .Título-2{
     text-align: center;
     color:#004aad;
 }
+
+=======
+}*/
 
