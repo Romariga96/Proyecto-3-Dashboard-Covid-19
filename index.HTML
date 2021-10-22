@@ -1,15 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard COVID-19</title>
     <link rel="stylesheet" href="./main.css" />
+
+    <!--LINK DE FUENTES-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Glory:wght@200&family=Rubik&display=swap" rel="stylesheet">
+
   </head>
 
   <body>
     <div class="Pagina">
+
+      <!--HEADER-->
+      <header id="Título Página">
+        <nav>
+          <div class="logo">
+            <img src="/img/logo7.png" alt="logo de la pagina">
+          </div>
+          <ul class="enlaces">
+              <li><a href="https://github.com/Romariga96/Proyecto-3-Dashboard-Covid-19">Proyecto</a></li>
+              <li><a href="https://coronavirus.gob.mx/">Saber más</a></li>
+              <li><a href="https://mmediagroup.fr/covid-19">API</a></li>
+          </ul>
+          
+        </nav>
+      </header>
+      
+      <!--PRESENTACIÓN-->
+      <section class="presentacion">
+        <h2 class="titulo">Dashboard-COVID-19</h2>
+        <div class="La-app">
+            <div class="textos">
+                <h3><span>1</span>COVID-19</h3>
+                <p>Para mantener a la población informada respecto a los datos actuales sobre la COVID-19; a continuación mostramos el comportamiento actual del COVID 19 respecto a cada Ciudad de diversos paises</p>
+                <h3><span>2</span>Gráficas</h3>
+                <p>En esta página podrás encontrar gráficas fidedignas, el estatus de los
+                  casos confirmados y muertes por COVID-19.
+                  (Favor de teclear en Inglés los nombres de los países)</p>
+            </div>
+            <img src="./img/COVID.svg" alt="Imagen REPRESENTATIVA A COVID" class="nuestra-app">
+        </div>
+    </section>
+=======
       <header id="Título Página">Dashboard COVID-19</header>
       <h3>
         A continuación mostramos el comportamiento del COVID 19 respecto a cada
@@ -21,6 +60,7 @@
       </h4>
       <h4>(Favor de teclear en Inglés los nombres de los países).</h4>
 
+
       <!--FORMULARIO-->
       <section class="container">
       <div class="form" >
@@ -29,6 +69,7 @@
       <!--<label>País</label>-->
       <select id="locality-dropdown" name="locality">
       </select>
+
       <label id="boton-enviar"> <button type="enviar" onclick="getCovidCases()">Enviar</button></label><br/>
     </div>
     
@@ -38,6 +79,25 @@
         <canvas id="covidChart"></canvas>
       </div>
     </section>
+
+
+      <!--FOOTER-->
+      <footer>
+        <div class="miembros">
+          <h4>INTEGRANTES DEL EQUIPO</h4>
+          <ul>
+            <li><a href="https://github.com/Eperaltas">Edgar Peralta</a> </li>
+            <li><a href="https://github.com/EsmeRobledo">Esmeralda Robledo</a> </li>
+            <li><a href="https://github.com/luisbalam">Luis Balam</a> </li>
+            <li><a href="https://github.com/Maricarmen519">Carmen Morales</a> </li>
+            <li><a href="https://github.com/rouss789">Rosa Isela</a> </li>
+            <li><a href="https://github.com/Romariga96">Rosa Rivera</a> </li>
+            <li><a href="https://github.com/IvanAP04">Víctor Iván</a> </li>
+          </ul>
+        </div>
+        <div class="Íconos">
+          <a href="https://github.com/Romariga96/Proyecto-3-Dashboard-Covid-19"> <img src="https://cdn.icon-icons.com/icons2/2351/PNG/512/logo_github_icon_143196.png" alt="Logo-Github" width="60" height="60">/></a>
+
       <footer>
         <b>
           <h6>INTEGRANTES DEL EQUIPO</h6>
@@ -93,12 +153,17 @@
             width="60"
             height="60"
           />
+
         </div>
         <div class = "Título-2">
           <p class = "Texto-Base">
             © 2021 Dashboard-COVID-19. Todos los derechos reservados.
 
           </p>
+
+
+          </p>
+
 
 
         </div>

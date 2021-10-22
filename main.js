@@ -1,5 +1,5 @@
 const dataChart = {
-    labels: ["Confirmados","Muertes","Recuperados"],
+    labels: ["Confirmados","Muertes"],
     datasets: [
       {
         label: "Estatus de Casos Registrados",
@@ -42,26 +42,25 @@ const dataChart = {
   });
 
   const getCovidCases = async () => {
-try{
+  try{
   const covidStatus = [];
     let responseContry = {};
     let citie = document.getElementById("locality-dropdown").value;
     let confirmados = 0;
     let muertes = 0;
-    let recuperados = 0;
    
    // let response = await axios.get(`https://covid-api.mmediagroup.fr/v1/cases`);//regresa el estatus de todos los paises
    if(citie != ""){
     responseContry = await axios.get(`https://covid-api.mmediagroup.fr/v1/cases?country=${citie}`);
-   } /*else{
-     responseContry = await axios.get(`https://covid-api.mmediagroup.fr/v1/cases?country=Mexico`);
-   }*/
+   } else{
+     alert("Para continuar debes seleccionar un pais");
+   }
     
     let countryall = responseContry.data['All'];
        confirmados = countryall['confirmed'];
        muertes = countryall['deaths'];
        recuperados = countryall['recovered'];
-       covidStatus.push(confirmados,muertes,recuperados);
+       covidStatus.push(confirmados,muertes);
     dataChart.datasets[0].data = covidStatus;
     myChart.update();
 }catch(e){
@@ -81,6 +80,11 @@ dropdown.selectedIndex = 0;
 
 function getpais(){
     const transPais = [
+      {
+        "name":"Global",
+        "traduccion":"Mundial"
+
+      },
       {
       "name":"Afghanistan",
       "traduccion":"Afganistan"
@@ -259,7 +263,6 @@ function getpais(){
         dropdown.add(option);
       }
   }
-
   getpais();
 
  
