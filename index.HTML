@@ -1,106 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard COVID-19</title>
     <link rel="stylesheet" href="./main.css" />
+
+    <!--LINK DE FUENTES-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Glory:wght@200&family=Rubik&display=swap" rel="stylesheet">
+
   </head>
 
   <body>
     <div class="Pagina">
-      <header id="Título Página">Dashboard COVID-19</header>
-      <h3>
-        A continuación mostramos el comportamiento del COVID 19 respecto a cada
-        Ciudad
-      </h3>
-      <h4>
-        En esta página podrás encontrar gráficas fidedignas, el estatus de los
-        casos confirmados, muertes y recuperados por COVID-19.
-      </h4>
 
+      <!--HEADER-->
+      <header id="Título Página">
+        <nav>
+          <div class="logo">
+            <img src="/img/logo7.png" alt="logo de la pagina">
+          </div>
+          <ul class="enlaces">
+              <li><a href="https://github.com/Romariga96/Proyecto-3-Dashboard-Covid-19">Proyecto</a></li>
+              <li><a href="https://coronavirus.gob.mx/">Saber más</a></li>
+              <li><a href="https://mmediagroup.fr/covid-19">API</a></li>
+          </ul>
+          
+        </nav>
+      </header>
+      
+      <!--PRESENTACIÓN-->
+      <section class="presentacion">
+        <h2 class="titulo">Dashboard-COVID-19</h2>
+        <div class="La-app">
+            <div class="textos">
+                <h3><span>1</span>COVID-19</h3>
+                <p>Para mantener a la población informada respecto a los datos actuales sobre la COVID-19; a continuación mostramos el comportamiento actual del COVID 19 respecto a cada Ciudad de diversos paises</p>
+                <h3><span>2</span>Gráficas</h3>
+                <p>En esta página podrás encontrar gráficas fidedignas, el estatus de los
+                  casos confirmados y muertes por COVID-19.</p>
+            </div>
+            <img src="./img/COVID.svg" alt="Imagen REPRESENTATIVA A COVID" class="nuestra-app">
+        </div>
+    </section>
       <!--FORMULARIO-->
+      <section class="container">
+      <div class="form" >
+      <h5>País</h5>
 
-      <h5>Formulario</h5>
+      <!--<label>País</label>-->
+      <select id="locality-dropdown" name="locality">
+      </select>
 
-      <label style="color: black">Usuario</label>
-      <input type="text" ; usuario="Usuario" />
-      <label id="boton-enviar">
-        <button type="enviar">Enviar</button>
-      </label>
-
-      <label style="color: black">País</label>
-      <input type="text" ; país="País" />
-      <label id="boton-enviar"> <button type="enviar">Enviar</button> </label
-      ><br />
-
+      <label id="boton-enviar"> <button type="enviar" onclick="getCovidCases()">Enviar</button></label><br/>
+    </div>
+    
       <!--CHECKBOX-->
 
-      <label>
-        <input type="checkbox" id="cbox1" value="primerCheckbox" />
-        Contagios</label
-      ><br />
-      <input type="checkbox" id="cbox2" value="segundoCheckbox" />
-      <label for="cbox2">Recuperados</label><br />
-      <input type="checkbox" id="cbox3" value="tercerCheckbox" />
-      <label for="cbox3">Muertes</label>
+      <div class="container_canvas" style="width: 70vw; height: 450px;">
+        <canvas id="covidChart"></canvas>
+      </div>
+    </section>
 
+
+      <!--FOOTER-->
       <footer>
-        <b>
-          <h6>INTEGRANTES DEL EQUIPO</h6>
-        </b>
-        <ul>
-          <li>
-            <a> Edgar Peralta </a>
-          </li>
-
-          <li>
-            <a> Esmeralda Robledo </a>
-          </li>
-          <li>
-            <a> Luis Balam </a>
-          </li>
-          <li>
-            <a> María del Carmen </a>
-          </li>
-
-          <li>
-            <a> Rosa Isela</a>
-          </li>
-          <li>
-            <a> Rosa Rivera</a>
-          </li>
-
-          <li>
-            <a> Victor Ivan </a>
-          </li>
-        </ul>
+        <div class="miembros">
+          <h4>INTEGRANTES DEL EQUIPO</h4>
+          <ul>
+            <li><a href="https://github.com/Eperaltas">Edgar Peralta</a> </li>
+            <li><a href="https://github.com/EsmeRobledo">Esmeralda Robledo</a> </li>
+            <li><a href="https://github.com/luisbalam">Luis Balam</a> </li>
+            <li><a href="https://github.com/Maricarmen519">Carmen Morales</a> </li>
+            <li><a href="https://github.com/rouss789">Rosa Isela</a> </li>
+            <li><a href="https://github.com/Romariga96">Rosa Rivera</a> </li>
+            <li><a href="https://github.com/IvanAP04">Víctor Iván</a> </li>
+          </ul>
+        </div>
         <div class="Íconos">
-          <img
-            alt="Logo-Facebook"
-            src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
-            width="60"
-            height="60"
-          />
-          <img
-            alt="Logo-Instagram"
-            src="https://logodownload.org/wp-content/uploads/2017/04/instagram-logo.png"
-            width="60"
-            height="60"
-          />
-          <img
-            alt="Logo-Twitter"
-            src="https://logos-marcas.com/wp-content/uploads/2020/04/Twitter-Logo.png"
-            width="60"
-            height="60"
-          />
-          <img
-            alt="Logo-Github"
-            src="https://cdn.icon-icons.com/icons2/2351/PNG/512/logo_github_icon_143196.png"
-            width="60"
-            height="60"
-          />
+          <a href="https://github.com/Romariga96/Proyecto-3-Dashboard-Covid-19"> <img src="https://cdn.icon-icons.com/icons2/2351/PNG/512/logo_github_icon_143196.png" alt="Logo-Github" width="60" height="60">/></a>
         </div>
         <div class = "Título-2">
           <p class = "Texto-Base">
@@ -109,10 +91,17 @@
           </p>
 
 
+          </p>
+
+
+
         </div>
       </footer>
-
-      <script src="main.js"></script>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
+
