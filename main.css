@@ -3,11 +3,139 @@
     box-sizing: border-box;
 
     padding: 0;
+    margin: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+    font-family: 'Glory', sans-serif; 
+    width: 90%;
+    background-color: #FEFCE6;
+    margin: auto;
+    padding: 60px 0;
+}
+/*HEADER*/
+header{
+    font-size: large;
+    color: #FE7A15;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    top: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 100px;
+}
+
+header nav .enlaces{
+    text-align: left;
+    flex-direction: column-reverse;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 10px;
+}
+nav .enlaces li{
+    display: inline-block;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0 10px;
+}
+nav .enlaces li a{
+    color: #FE7A15;
+    font-size: x-large;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+}
+
+nav .enlaces li a:hover{
+    color: #0191B4;
+}
+/*nav {
+    padding: 0;
+    font-size: large;
+    color: #FE7A15;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+}
+nav .enlaces{
+    list-style: none;
+    display: inline-block;
+}
+nav .enlaces a{
+    display: inline-block;
+    text-decoration: none;
+    color: #FE7A15;
+    font-size: 20px;
+    font-weight: 300;
+}*/
+
+
+/*PRESENTACIÓN*/
+section {
+    display: grid;
+    column-gap: 30px;
+    background-color: #FEFCE6;
+}
+.titulo{
+    font-size: 40px;
+    font-style: bold;
+    margin-bottom: 15px;
+    color: #0191B4;
+}
+section .presentacion{
+    padding: 30px 0 60px 0;
+}
+
+.La-app{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nuestra-app{
+    width: 50%;
+}
+.presentacion .textos{
+    width: 48%;
+}
+
+.textos h3{
+    margin-bottom: 20px;
+    color: #FE7A15;
+}
+
+.textos h3 span{
+    background: #FEFCE6;
+    color: #FE7A15;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    margin-right: 5px;
+}
+
+.textos p{
+    padding: 0px 0px 30px 15px;
+    font-size: large;
+    color: #004aad;
+    font-weight: 400;
+    text-align: justify;
+=======
+
+    padding: 0;
 
     margin: 0;
 
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
    
+
 
 }
 .container{
@@ -18,10 +146,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-   
- 
 
-    
 }
 .form{
     background-color: #0191B4;
@@ -38,6 +163,7 @@
     text-transform: uppercase;
     font-weight: 600;
 }
+
 .form select,
 .form label button[type="enviar"]
 /*form label*/{
@@ -70,4 +196,80 @@
 /*.container_canvas{
     display: flex;
     flex-shrink:8;
+
 }*/
+
+/*FOOTER*/
+footer{
+    background-color: #E8E4D9;
+}
+footer .miembros{
+    box-sizing: border-box;
+    padding: .5em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center ;
+    height: auto;
+    background-color: #E8E4D9;
+}
+
+footer  ul {
+    list-style: none;
+}
+
+.miembros h4{
+    font-size: 18px;
+    color: #004AAD;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+    position: relative;
+}
+.miembros h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #FE7A15;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.info ul li:not(:last-child){
+    margin-bottom: 5px;
+}
+
+footer .miembros ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #88B2F2;
+    text-decoration: none;
+    font-weight: 300;
+    color: #0191ba;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+.miembros ul li a:hover{
+    color: #004AAD;
+    padding-left: 8px;
+}
+
+footer .Íconos{
+    align-items: center;
+    text-align: center;
+    background:#E8E4D9;
+}
+
+footer .Título-2{
+    width: 100%;
+    background:#E8E4D9;
+    padding: 8px 100px;
+    text-align: center;
+    color:#004aad;
+}
+
+=======
+}*/
+

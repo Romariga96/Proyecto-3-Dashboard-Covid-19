@@ -42,7 +42,7 @@ const dataChart = {
   });
 
   const getCovidCases = async () => {
-try{
+  try{
   const covidStatus = [];
     let responseContry = {};
     let citie = document.getElementById("locality-dropdown").value;
@@ -58,7 +58,10 @@ try{
     let countryall = responseContry.data['All'];
        confirmados = countryall['confirmed'];
        muertes = countryall['deaths'];
-    covidStatus.push(confirmados,muertes);
+      covidStatus.push(confirmados,muertes);
+      recuperados = countryall['recovered'];
+       covidStatus.push(confirmados,muertes);
+
     dataChart.datasets[0].data = covidStatus;
     myChart.update();
 }catch(e){
@@ -83,7 +86,8 @@ function getpais(){
         "traduccion":"Mundial"
 
       },
-      {"name":"Afghanistan",
+      {
+      "name":"Afghanistan",
       "traduccion":"Afganistan"
       },
       {
@@ -260,7 +264,7 @@ function getpais(){
         dropdown.add(option);
       }
   }
-
+  
   getpais();
 
  
