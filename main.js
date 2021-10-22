@@ -49,7 +49,6 @@ const dataChart = {
     let confirmados = 0;
     let muertes = 0;
    
-   // let response = await axios.get(`https://covid-api.mmediagroup.fr/v1/cases`);//regresa el estatus de todos los paises
    if(citie != ""){
     responseContry = await axios.get(`https://covid-api.mmediagroup.fr/v1/cases?country=${citie}`);
    } else{
@@ -59,8 +58,10 @@ const dataChart = {
     let countryall = responseContry.data['All'];
        confirmados = countryall['confirmed'];
        muertes = countryall['deaths'];
-       recuperados = countryall['recovered'];
+      covidStatus.push(confirmados,muertes);
+      recuperados = countryall['recovered'];
        covidStatus.push(confirmados,muertes);
+
     dataChart.datasets[0].data = covidStatus;
     myChart.update();
 }catch(e){
@@ -263,6 +264,7 @@ function getpais(){
         dropdown.add(option);
       }
   }
+  
   getpais();
 
  
